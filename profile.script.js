@@ -26,3 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const cricketPlayersList = document.getElementById('cricketPlayers');
+
+    // Fetch cricket players from the server
+    fetch('/api/cricket')
+        .then(response => response.json())
+        .then(cricketPlayers => {
+            cricketPlayers.forEach(player => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `Name: ${player.name}, Email: ${player.email}, Age: ${player.age}, City: ${player.city}`;
+                cricketPlayersList.appendChild(listItem);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching cricket players:', error);
+        });
+});
+

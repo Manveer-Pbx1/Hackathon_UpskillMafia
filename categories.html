@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Categories</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" >
+                <img class="logo" src="./images/icons/download-removebg-preview (4).png"></a>
+            
+            <!-- Navbar Links -->
+            <div class="  hidden md:flex space-x-4">
+                <a href="categories.html" class="text-white mr-9  00">Categories</a>
+                <a href="#" class="text-white mr-90">Events</a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex items-center">
+                <input type="text" placeholder="Search..." class="px-4 py-2 rounded-l-lg focus:outline-none italic">
+                <button class="bg-gray-600 text-white px-4 py-2 rounded-r-lg hover:bg-red-700 focus:outline-none">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container mx-auto mt-8">
+        <h1 class="text-3xl font-bold mb-4">Sports Categories</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <!-- Cricket -->
+            <div class="bg-white p-4 shadow rounded-lg cursor-pointer hover:bg-red-600 hover:shadow-lg">
+                <a href="category.cricket.html" >
+                <h2 class="text-xl font-bold mb-2">Cricket</h2>
+                <p>Description of cricket category goes here.</p>
+                </a>
+            </div>
+            <!-- Badminton -->
+            <div class="bg-white p-4 shadow rounded-lg cursor-pointer hover:bg-yellow-600 hover:shadow-lg">
+                <a href="badminton.html">
+                <h2 class="text-xl font-bold mb-2">Badminton</h2>
+                <p>Description of badminton category goes here.</p>
+        </a>
+            </div>
+            <!-- Football -->
+            <div class="bg-white p-4 shadow rounded-lg cursor-pointer hover:bg-blue-600 hover:shadow-lg">
+                <a href="football.html">
+                <h2 class="text-xl font-bold mb-2">Football</h2>
+                <p>Description of football category goes here.</p>
+                </a>
+            </div>
+            <!-- Basketball -->
+            <div class="bg-white p-4 shadow rounded-lg cursor-pointer hover:bg-red-800 hover:shadow-lg">
+                <a href="basketball.html">
+                <h2 class="text-xl font-bold mb-2">Basketball</h2>
+                <p>Description of basketball category goes here.</p>
+                </a>
+            </div>
+            <!-- Tennis -->
+            <div class="bg-white p-4 shadow rounded-lg cursor-pointer hover:bg-green-600 hover:shadow-lg">
+                <a href="tennis.html">
+                <h2 class="text-xl font-bold mb-2">Tennis</h2>
+                <p>Description of tennis category goes here.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

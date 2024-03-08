@@ -1,24 +1,24 @@
+<!-- basketball.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>basketball Players</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
-    <!-- Navbar -->
     <nav class="bg-gray-800 py-4">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
-            <a href="profile.html" >
+            <a href="index.html" >
                 <img class="logo" src="./images/icons/download-removebg-preview (4).png"></a>
             
             <!-- Navbar Links -->
             <div class="  hidden md:flex space-x-4">
                 <a href="categories.html" class="text-white mr-9  00">Categories</a>
-                <a href="events.html" class="text-white mr-90">Events</a>
+                <a href="#" class="text-white mr-90">Events</a>
             </div>
 
             <!-- Search Bar -->
@@ -28,10 +28,13 @@
             </div>
         </div>
     </nav>
-
-    <!-- Content Section -->
     <div class="container mx-auto mt-8">
-        <h1 class="text-6xl font-arial font-extrabold my-40 mb-4 italic hover:not-italic">Find Peers. Find Events. Find Passion</h1>
+        <h1 class="text-3xl font-bold mb-4">basketball Players</h1>
+        <ul id="basketballPlayers" class="list-disc pl-4">
+            <!-- basketball players will be inserted here -->
+        </ul>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

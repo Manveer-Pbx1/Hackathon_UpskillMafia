@@ -9,7 +9,7 @@ const app = express();
 mongoose.connect('mongodb://localhost:27017/userDB');
 
 // Create user schema
-const userSchema = new mongoose.Schema({ 
+const userSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String,
@@ -24,15 +24,21 @@ const User = mongoose.model('User', userSchema);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Handle POST request to store user details
-app.post('/api/user', async (req, res) => {
+// Serve HTML file for sports page
+app.get('/:sport', (req, res) => {
+    const sport = req.params.sport.toLowerCase();
+    res.sendFile(__dirname + '/sport.html');
+});
+
+// API endpoint to fetch users for a specific sport
+app.get('/api/:sport', async (req, res) => {
+    const sport = req.params.sport.toLowerCase();
     try {
-        const newUser = new User(req.body);
-        await newUser.save();
-        res.status(201).send('User details saved successfully');
+        const players = await User.find({ sports: sport });
+        res.json(players);
     } catch (error) {
-        console.error('Error saving user details:', error);
-        res.status(500).send('Error saving user details');
+        console.error(`Error fetching ${sport} players:`, error);
+        res.status(500).send(`Error fetching ${sport} players`);
     }
 });
 
