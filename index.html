@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
 </head>
-<body>
-    testing..
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="profile.html" >
+                <img class="logo" src="./images/icons/download-removebg-preview (4).png"></a>
+            
+            <!-- Navbar Links -->
+            <div class="  hidden md:flex space-x-4">
+                <a href="#" class="text-white mr-9  00">Categories</a>
+                <a href="#" class="text-white mr-90">Events</a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex items-center">
+                <input type="text" placeholder="Search..." class="px-4 py-2 rounded-l-lg focus:outline-none italic">
+                <button class="bg-gray-600 text-white px-4 py-2 rounded-r-lg hover:bg-red-700 focus:outline-none">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container mx-auto mt-8">
+        <h1 class="text-6xl font-arial font-extrabold my-40 mb-4 italic hover:not-italic">Find Peers. Find Events. Find Passion</h1>
+    </div>
 </body>
 </html>
